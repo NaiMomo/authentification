@@ -1,0 +1,332 @@
+@import url(clearSans.css);
+body{
+    background-color: white;
+
+}
+.card {
+  margin: 0 30px 60px;
+  padding: 20px 40px;
+  width: 460px;
+  box-shadow: 0 8px 26px -4px rgba(0,0,0,0.15);
+  border-radius: 5px;
+  background: var(--white);
+}
+.card-wrapper {
+  margin: 0 auto;
+  padding: 90px 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+}
+.field {
+  margin: 0 0 24px;
+  padding: 11px 16px 9px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--almost-black);
+  border: 1px solid var(--grey);
+  border-radius: 4px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  display: block;
+  background: var(--almost-white);
+  transition: border-color .15s ease;
+}
+
+.btn-logIn {
+  margin: 0 0 24px;
+  padding: 11px 30px 10px;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  background: var(--primary);
+  transition: color .15s ease, background-color .15s ease;
+}
+
+.field:focus {
+  border-color: var(--grey-medium);
+  outline: none;
+}
+@media only screen and (max-width: 520px) {
+  .card-wrapper {
+    padding: 30px 0 0;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .card {
+    margin: 0 0 30px;
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+#logo{
+    margin: auto;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    width: 300px;
+    background-color: aqua;
+
+}
+.nav-link{
+    color: #776E65;
+    font-weight: bolder;
+    padding: 1em;
+}
+a.navbar-brand{
+    color: seagreen;
+    font-size: 25px;
+    font-weight: bolder;
+}
+a.nav-link:hover{
+    background-color: #FAF8EF;
+    color: seagreen;
+}
+nav.navbar{
+    padding:1px;
+}
+#navigation{
+    font-family: 'Clear Sans', arial, sans-serif;
+}
+#navigation table th{
+    background-color:#F9F6F2;
+    color: #776E65;
+}
+#navigation table{
+    margin: auto;
+    width: 80%;
+}
+#navigation a.btn-danger{
+    float: left;
+
+}
+#navigation a.btn-success{
+    float: right;
+}
+.h1-admin {
+  margin: 0.5em 0 1em;
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--almost-black);
+    text-align: center;
+}
+#navigation table tbody tr:nth-child(odd){
+    background-color:#F9F6F2;
+    color: #776E65;
+}
+#navigation table tbody tr:nth-child(even), #navigation table thead th{
+    background-color:#BBADA0;
+    color: #F9F6F2;
+}
+#navigation table thead th{
+    background-color:#776E65;
+    color: #F9F6F2;
+     border: 1px solid #CDC1B4;
+}
+#navigation table tbody td{
+    border: 1px solid #776E65;
+}
+#navigation table thead th{
+    border-bottom: 0;
+}
+.table{
+    width: 85%!important;
+    margin: auto;
+}
+#navigation h1, #signUp h1, #logIn h1{
+    font-weight: bold;
+    text-align: center;
+    color: #776E65;
+    font-family: 'Clear Sans', arial, sans-serif;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+#signUp>form {
+    margin-bottom: 10em;
+}
+fieldset{
+    font-family: 'Clear Sans', arial, sans-serif;
+}
+.btn-log{
+    background: #8f7a66;
+    border-radius: 3px;
+
+    text-decoration: none;
+    color: #F9F6F2;
+    height: 45px;
+    border:none;
+    width: 120px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    font-family: 'Clear Sans', arial, serif;
+}
+.orderButton{
+    background: #8f7a66;
+    color: #F9F6F2;
+    font-family: 'Clear Sans', arial, serif;
+    border:none;
+    font-weight: bolder;
+    padding: .3em;
+}
+nav{
+    margin-bottom: 1em;
+    background-color: red;
+    font-family: 'Clear Sans', arial, sans-serif;
+}
+.alert_pop_up{
+    position: absolute!important;
+    bottom: 80px!important;
+    z-index: 1!important;
+}
+div.nav-item{
+    margin: 0 1em 0 1em;
+}
+div.nav-item>.btn-success{
+    float: right;
+}
+div.nav-item>.btn-danger{
+    float: left;
+
+}
+button.navbar-toggler {
+    color: #FFFFFF;
+}
+
+input.form-control{
+    width: 300px;
+    margin: auto auto 1em;
+
+}
+
+form{
+    font-weight: bold;
+    text-align: center;
+}
+nav div ul{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+}
+
+div.form-group{
+    margin-bottom: 1.5em;
+}
+div.form-group:first-child{
+    margin-top: 2em;
+}
+
+#navigation form {
+
+    max-width: 75%;
+    margin: 0 auto;
+    margin-bottom: 2em;
+
+
+
+
+
+}
+#admin_options select{
+    margin-right: 1em;
+}
+#admin_options{
+    margin-bottom:2em;
+}
+/*#panneau_admin{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}*/
+#panneau_admin>div:first-child, #panneau_admin>div:last-child{
+    background-color: #BBADA0;
+    color: #FFFFFF;
+    padding: .5em;
+    text-align: center;
+    font-weight: bold;
+    z-index: auto;
+
+}
+
+
+#panneau_admin>div:first-child{
+    margin-left: 2.3em;
+    float: left;
+}
+#panneau_admin>div:last-child{
+    margin-top: -5.5em;
+    margin-right: 2.3em;
+    margin-left: 1em;
+    float: right;
+
+
+}
+
+footer{
+    border-top : 1px solid #8f7a66;
+    padding-top: 2em;
+    text-align: center;
+    padding-bottom: 2em;
+    color: saddlebrown;
+    font-size: smaller;
+    font-family: 'Clear Sans', arial, sans-serif;
+    /*position: absolute;*/
+    width: 100%;
+    bottom: 3px;
+    margin-top: 10em;
+
+}
+footer a, footer a:active, footer a:hover{
+    color: saddlebrown;
+    text-decoration: underline;
+}
+div#logIn, div#signUp, div#navigation{
+    margin-bottom: 15em;
+}
+div#navigation{
+    margin-bottom: 10em;
+}
+div#tableau{
+    margin-bottom: 5em;
+}
+.d-flex.align-items-center {
+  justify-content: center;
+}
+
+fieldset {
+    width: 300px;
+    margin: 0 auto;
+}
+.index_log{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.spinner{
+    text-align: center;
+    margin: auto;
+}
+div.col-sm {
+    border: 2px solid #BBADA0;
+    border-radius: 10px;
+}
+fieldset.col-sm {
+    padding-right: 5em;
+
+}
+fieldset div input{
+    width: 100px!important;
+}

@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+
+
+<div id="admin_options">
+<section>
+    <form method="POST" action = {{url_for('admin_view')}}> {# action = {{url_for('admin_view')}} #}
+        <label for="description">Aller</label>
+        <select id="orderBy" name="orderBy">
+
+            <option value="c_affaires" >Clients d'affaires</option>
+            <option value="c_residentiel" >Clients résidentiels</option>
+            <option value="utilisateurs" >Utilisateurs</option>
+            <option value="password_update" >Changer mon mot de passe</option>
+            <option value="password_policy" >Configuration</option>
+
+
+        </select>
+        <button type="submit" class="btn btn-info" {% if 'disabled' in select %} disabled {% endif %} >Afficher</button>
+    </form>
+</section>
+
+</div>
+
+<nav>
+<div class="nav-item">
+
+    <a onclick="location.href='{{ url_for('signout') }}'" class="btn btn-danger">Déconnexion</a>
+
+    <a class="btn btn-success "  href = "{{url_for('add_new_user')}}" >Nouvel utilisateur</a> {# {{url_for('add_new_user')}} #}
+</div>
+
+</nav>
+
+
+    <div>
+
+    </div>
+        {# Clients table #}
+
+    {%  if show_clients %}
+         {% include 'clients_table.html' %}
+    {% endif %}
+
+    {% if show_users %}
+         {% include 'users_table.html' %}
+
+    {% endif %}
+
+    {% if show_password_policy %}
+
+        {% include 'password_policy.html' %}
+
+        <div style="text-align: center">
+            <p>{{ policy | safe }}</p>
+        </div>
+
+    {% endif %}
+
+    {% if show_password_update %}
+        {% include 'password_update.html' %}
+        <div style="text-align: center">
+            <p>{{ policy | safe }}</p>
+        </div>
+
+
+    {% endif %}
+
+    {% if show_new_user_form %}
+        {% include 'new_user.html' %}
+    {% endif %}
+
+
+
+
+
+{% endblock %}

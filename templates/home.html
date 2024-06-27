@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <div class="card-wrapper">
+
+    <div class="card">
+
+      <h1 class="center">Ouvrir une session</h1>
+
+      <form name="login_form">
+
+        <label for="email">Nom d'utilisateur</label>
+        <input type="text" name="username" class="field" required>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" class="field" required>
+
+        <p class="error error--hidden"></p>
+
+        <button type="submit" id="loginButton" onclick="showSpinner(); clearPerror()" class="btn-logIn">Se connecter</button>
+
+
+      </form>
+            <div id="spinner" class="spinner spinner-border text-primary" style="display:none;"></div>
+        <script>
+          function clearPerror(){
+              $('.error--hidden').text= null
+          }
+          function showSpinner(){
+            var spinner = document.getElementById('spinner');
+            spinner.style.display = 'inline-block';
+            document.getElementById('loginButton').style.backgroundColor = "grey";
+          }
+
+          function hideSpinner(){
+            var spinner = document.getElementById('spinner');
+            spinner.style.display = 'none';
+            document.getElementById('loginButton').style.backgroundColor = "";
+          }
+
+          $('.error--hidden').on('DOMSubtreeModified', function(){
+            if ($('.error--hidden').text() != null){
+              hideSpinner();
+            }
+          });
+        </script>
+
+    </div>
+
+  </div>
+{% endblock %}

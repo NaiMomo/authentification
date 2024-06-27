@@ -1,0 +1,49 @@
+{%  extends  "base.html"%}
+
+{% block content %}
+<nav>
+    <div class="nav-item">
+        <a onclick="location.href='{{ url_for('signout') }}'" class="btn btn-danger">Déconnexion</a>
+    </div>
+</nav>
+
+    <div class="card-wrapper">
+
+
+
+        <form method="POST" action= {{url_for("force_password_update")}}>
+        <fieldset>
+            <h1 class="h1-admin">Changer mon mot de passe</h1>
+
+        </fieldset>
+
+        <fielset >
+            <label for="password">Nouveau mot de passe</label>
+            <input name="password"  type="password"
+                      class="form-control"{{ request.form['password'] }}>
+             <label for="confirmer">Confirmation de mot de passe</label>
+            <input name="confirmer"  type="password"
+                      class="form-control"{{ request.form['confirmer'] }}>
+            <div>
+            <button type="submit" class="btn-log">Modifier</button>
+        </div>
+        </fielset>
+
+        <fieldset>
+            <br>
+            {% if show_password_update %}
+                    <div style="text-align: center">
+                    <p>{{ policy | safe }}</p>
+                    </div>
+
+            {% endif %}
+        </fieldset>
+
+        </form>
+
+    </div>
+
+
+
+
+{% endblock %}

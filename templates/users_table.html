@@ -1,0 +1,51 @@
+
+<h1 class="h1-admin">Table d'utilisateurs</h1>
+<table class="table table-striped">
+                <thead>
+                <tr>
+
+                    <th>ID</th>
+                    <th>Utilisateur</th>
+                    <th>Rôle</th>
+                    <th>Tentatives</th>
+                    <th>Bloqué</th>
+                    <th>MDP Expiré</th>
+                    <th>Date de modification du mdp</th>
+                    <th>Dernière tentative de connection</th>
+                    <th>Actions</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                {% for user in users %}
+                    <p>{{ user['id'] }}</p>
+                    <tr>
+                    <td>{{user['_id']}}</td>
+                    <td>{{user['username']}}</td>
+                    <td>{{user['role']}}</td>
+                    <td><b>{{user['loginAttempt']}}</b></td>
+                    <td><b>{{user['blocked']}}</b></td>
+                    <td><b>{{user['expired_psw']}}</b></td>
+                    <td><b>{{user['passwordChangeDate']}}</b></td>
+                    <td><b>{{ user['LastLoginAttmp'] }}</b></td>
+                    <td>
+                        <div class="dropdown">
+                          <button type="button" class="btn btn-basic dropdown-toggle" data-toggle="dropdown">
+                            Options
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" onclick="comfirmPasswdPopUp('admin_role', '{{user['username']}}')  " >Ajouter rôle admin</a>
+                            <a class="dropdown-item" onclick="comfirmPasswdPopUp('resi_role', '{{user['username']}}')">Ajouter rôle résidentiel</a>
+                            <a class="dropdown-item" onclick="comfirmPasswdPopUp('business_role', '{{user['username']}}')  ">Ajouter rôle affaire</a>
+                            <a class="dropdown-item" onclick="comfirmPasswdPopUp('reset_pass', '{{user['username']}}')">Débloquer</a>
+                          </div>
+                        </div>
+                    </td>
+
+                    </tr>
+
+
+                {% endfor %}
+
+            </tbody>
+        </table>

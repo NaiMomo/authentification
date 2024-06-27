@@ -1,0 +1,24 @@
+<h1 class="h1-admin">Table de clients </h1>
+<table class="table table-striped">
+        <thead>
+        <tr>
+
+            <th>Prenom</th>
+            <th>Nom</th>
+            <th>Type</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+
+        <tr>
+            <td>{{user['nom']}}</td>
+            <td>{{user['prenom']}}</td>
+            <td>{{user['role']}}</td>
+
+        </tr>
+    {% endfor %}
+
+        </tbody>
+    </table>

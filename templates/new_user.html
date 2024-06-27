@@ -1,0 +1,49 @@
+
+    <div class="col-8 card-wrapper">
+
+
+        <form method="post" action="{{ url_for("add_new_user") }}" >
+        <fieldset>
+            <label for="nickname">Nouveau Utilisateur</label>
+            <input type="text" name="Utilisateur" type="password"
+                   placeholder="Nouvel utilisateur" class="form-control"
+                   value="{{ request.form['Utilisateur'] }}">
+        </fieldset>
+
+         <fieldset>
+            <label for="user_role">Rôle d'utilisateur</label>
+            <select name="user_role" class="form-control">
+            <option value="admin">admin</option>
+            <option value="affaires">affaires</option>
+                <option value="residentiel">résidentiel</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <label for="password">Mot de passe</label>
+            <input name="password" placeholder="************" type="password"
+                      class="form-control"{{ request.form['password'] }}>
+        </fieldset>
+
+            <fieldset>
+                <label for="passwordConfirmation">Confirmation de mot de passe</label>
+                <input name="passwordConfirmation" placeholder="************" type="password"
+                          class="form-control"{{ request.form['passwordConfirmation'] }}><div>
+
+            </div>
+            </fieldset>
+
+            <div>
+        <fieldset>
+    <label for="confirmation">Veuillez saisir votre mot de passe ajouter l'utilisateur</label>
+    <input name="confirmation" placeholder="************" type="password" class="form-control" required>
+            <button type="submit" class="btn-log">Soumettre</button>
+</fieldset>
+
+    </div>
+
+        </form>
+    </div>
+<div style="text-align: center">
+            <p>{{ policy | safe }}</p>
+        </div>
